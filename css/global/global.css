@@ -12,8 +12,15 @@ ul {
 
 h1,
 ul,
-p {
+p,
+h2,
+h3,
+h4 {
   margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -21,7 +28,6 @@ img {
   display: block;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+img [src$=".jpg"] {
+  border-radius: 4px;
 }

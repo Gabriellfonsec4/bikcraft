@@ -1,0 +1,98 @@
+.bicicleta-lista {
+  padding-bottom: 60px;
+  padding-top: 120px;
+}
+
+.bicicleta-lista h2 {
+  margin-bottom: 40px;
+}
+
+.bicicleta-lista ul {
+  display: flex;
+  gap: 40px;
+  padding: 0 20px 20px 20px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+}
+
+.bicicleta-lista li {
+  min-width: 280px;
+}
+
+.bicicleta-lista a {
+  display: block;
+}
+
+.bicicleta-lista img {
+  margin-bottom: 16px;
+}
+
+.bicicleta-lista h3 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.bicicleta-lista h3::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 8px;
+  margin-right: 8px;
+  background-color: var(--cor-p1);
+}
+
+.bicicleta-lista li span {
+  padding-left: 20px;
+}
+
+/* --- ANIMAÇÃO NAS BICICLETAS --- */
+
+.bicicleta-lista li {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bicicleta-lista li img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* Hover na bicicleta */
+.bicicleta-lista li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+.bicicleta-lista li:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.15);
+}
+
+@media (max-width: 800px) {
+  .bicicleta-lista {
+    padding-bottom: 60px;
+  }
+  .bicicleta-lista ul {
+    gap: 20px;
+  }
+  /* Remove a animação do card */
+  .bicicleta-lista li {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove o zoom da imagem */
+  .bicicleta-lista li img {
+    transform: none !important;
+    filter: none !important;
+  }
+
+  /* Remove o efeito do hover */
+  .bicicleta-lista li:hover,
+  .bicicleta-lista li:hover img {
+    transform: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+  }
+}
